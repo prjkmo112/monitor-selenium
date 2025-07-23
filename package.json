@@ -1,0 +1,60 @@
+{
+  "name": "monitor-selenium",
+  "description": "monitoring utility to Selenium WebDriver",
+  "version": "0.1.0",
+  "publishConfig": {
+    "access": "public"
+  },
+  "author": "",
+  "private": false,
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/prjkmo112/monitor-selenium.git"
+  },
+  "homepage": "https://github.com/prjkmo112/monitor-selenium",
+  "type": "module",
+  "main": "dist/index.cjs",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "scripts": {
+    "build": "tsc && rollup -c",
+    "test": "jest",
+    "lint": "eslint . --ext .ts"
+  },
+  "files": [
+    "dist"
+  ],
+  "engines": {
+    "node": ">=12"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^28.0.6",
+    "@rollup/plugin-json": "^6.1.0",
+    "@rollup/plugin-node-resolve": "^16.0.1",
+    "@rollup/plugin-terser": "^0.4.4",
+    "@types/jest": "^30.0.0",
+    "@types/node": "^24.0.15",
+    "eslint": "^9.31.0",
+    "jest": "^30.0.4",
+    "rollup": "^4.45.1",
+    "rollup-plugin-bundle-size": "^1.0.3",
+    "rollup-plugin-copy": "^3.5.0",
+    "rollup-plugin-typescript2": "^0.36.0",
+    "selenium-webdriver": "^4.34.0",
+    "ts-jest": "^29.4.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3",
+    "typescript-eslint": "^8.37.0"
+  },
+  "dependencies": {
+    "@types/selenium-webdriver": "^4.1.28",
+    "mkdirp": "^3.0.1"
+  }
+}
